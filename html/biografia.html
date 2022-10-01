@@ -1,39 +1,15 @@
 <!DOCTYPE html>
-
-<!--Empezamos cada HTML con un ! y enter, eso crea automáticamente el cabezal. 
-Lo primero que aparece es el detalle de que el tipo de documento es html.
-El HTML es el esqueleto de cada página web, determina el idioma, los párrafos, las bases donde estará cada cosa
-Cuando abrimos un navegador, lo que hace es justamente escanear el contenido del html-->
-
 <html lang="es">
-
-<!--Esta etiqueta indica que el idioma utilizado para los comandos es ENGLISH-->
-
 <head>
-    <!-- La primera etiqueta es el HEAD, donde figura la información del html.
-La información contenida en esta estructura no será visible en la web-->
-
-    <meta charset="UTF-8">
-    <!--Esta etiqueta determina que los caracteres a utilizar serán los latinos
-    Podría especificar chino o algún otro idioma oriental-->
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--Esta etiqueta lo que permite es establecer la compatibilidad respecto de los navegadores
-    a utilizar para leer el html-->
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Esta etiqueta determina que el html se abrirá en los distintos dispositivos, adaptándose 
-    al ancho de pantalla, con escala inicial de 1.0.-->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/style.css">
 
     <title>Rukia Kuchiki | Biografía</title>
-    <!--En esta etiqueta configuramos el título visible del documento. Es el nombre que figurará en la barra de título
-y en la pestaña. Puede tener como máximo entre 50/60 caracteres-->
 </head>
-<!--Con esto cerramos el head-->
 
 <body>
     <header>
@@ -71,13 +47,13 @@ y en la pestaña. Puede tener como máximo entre 50/60 caracteres-->
             <div>
                 <!-- Acá faltan los id para que el "label for" funcione -->
                 <label for="usuario">Usuario</label>
-                <input type="user" name="" id="">
+                <input type="user" name="" id="name">
             </div>
 
             <div>
                 <!-- No se aceptan caracteres especiales en atributos, clases ni IDs -->
                 <label for="password">Contraseña</label>
-                <input type="password" name="" id="">
+                <input type="password" name="" id="password">
             </div>
             <div>
                 <input type="submit" value="Enviar">
@@ -99,10 +75,10 @@ y en la pestaña. Puede tener como máximo entre 50/60 caracteres-->
         <nav>
             <ol>
                 <li> <a href="apariencia-y-personalidad.html">Apariencia y Personalidad</a></li>
-                <li> <a href="Historia.html">Historia</a></li>
-                <li>Poderes y Habilidades</li>
-                <li>Batallas</li>
-                <li>Curiosidades</li>
+                <li> <a href="historia.html">Historia</a></li>
+                <li> <a href="#">Poderes y Habilidades</a></li>
+                <li> <a href="#">Batallas</a></li>
+                <li> <a href="#">Curiosidades</a></li>
             </ol>
         </nav>
 
@@ -112,10 +88,10 @@ y en la pestaña. Puede tener como máximo entre 50/60 caracteres-->
     </main>
 
 
-    <article>
-        <!-- Las etiquetas semánticas (section, article, etc) deben tener un título. Acá se podría reemplazar la etiqueta <p> por algún <h#> -->
-        <p> ¡¡Primera entrevista a Tite Kubo luego del relanzamiento del anime!!</p>
-        <!-- Nuevamente, no está mal usar un div acá, pero tiene que tener una finalidad en específico -->
+    <article class="articulo-especial">
+        
+        <h4> ¡¡Primera entrevista a Tite Kubo luego del relanzamiento del anime!!</h4>
+     
         <div>
             <a href="entrevista.html"> Click aquí para leer la nota</a>
 
@@ -125,10 +101,10 @@ y en la pestaña. Puede tener como máximo entre 50/60 caracteres-->
 
 
     <footer>
-        <div>
+        <div class="disclaimer">
           <p>Wikia es propiedad de Wikipedia. La información contenida es pública y editable por los usuarios.</p>
         </div>
-        <div>
+        <div class="aviso">
           <p>Al Registrarte, accedés a zonas exclusivas de la wikia, además de que al editar satisfactoriamente los
             distintos artículos, obtenés puntos de rango y medallas!</p>
           <input type="button" value="Registrarse">

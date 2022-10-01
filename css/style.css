@@ -9,6 +9,9 @@ Como referencias de colores
 $color_principal: #d597eb;
 $color_secundario: #5b51ca;
 $color_terciario: #061841;
+#110322 - para fondo
+#ad81bd - lila más mate
+
 $fafafa: #fafafa;
 **/
 
@@ -16,11 +19,14 @@ $fafafa: #fafafa;
 
 
 body {
-    background-color: #fafafa;
+    background-color:#110322 ;
     font-size: 1.125rem;
     font-family: "Montserrat", sans-serif;
 }
 
+form{
+    color: #fafafa
+}
 h1,
 h2,
 h3,
@@ -28,11 +34,18 @@ h4,
 h5,
 h6 {
     font-family: "Montserrat", sans-serif;
-    color: #061841;
+    color: #fafafa;
 }
 
 h1 {
     text-decoration: underline;
+     
+
+}
+
+h2{
+    text-decoration:underline dotted;
+    margin-left: 50px;
 }
 
 h1,
@@ -43,21 +56,30 @@ p {
 
 p {
     font-family: "Montserrat", sans-serif;
-    color: #061841;
+    color: #fafafa;
+    margin-right:60px;
+    margin-left: 60px;
+    margin-top: 15px;
 }
 
 a {
     text-decoration: none;
-    color: #061841;
+    color: #fafafa;
     font-weight: 500;
 }
 
 a,
 button {
     border: 2px solid #061841;
-    border-radius: 16px;
+    border-radius:16px;  
+   
 }
 
+a, button, li {
+    padding: 5px;
+    margin: 4px, 8px;
+    color:hsl(267, 64%, 7%)
+}
 nav {
     padding: 0 40px;
     background-color: #d597eb;
@@ -65,16 +87,94 @@ nav {
     flex-flow: row;
     justify-content: center;
     align-items: center;
-    
 }
 
 
 footer {
         padding-top: 1%;
+        margin: 15px;
         border-top: 2px solid #5b51ca;
         font-style: italic;
+        display:flex;
+        flex-flow: column;
+        justify-items: center;
+        align-items: center;
+               
 }
+
 
 .navbar-brand {
 border:0;
+}
+
+.container {
+    position:relative;
+    width: 75%;
+
+}
+
+.image{
+    opacity: 1;
+    display: block;
+    backface-visibility: hidden;
+    width: 50%;
+    height: auto;
+    transition: .5s ease;
+    margin: 20px;
+
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container:hover .image {
+    opacity: 0.3;
+  }
+  
+  .container:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: #5b51ca;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+
+  article> h4{
+    padding: 10px;
+
+  }
+
+@keyframes cambiarcolor {
+
+    from{ background-color: #5b51ca;}
+    to{ background-color: #061841;}
+}
+  .articulo-especial h4:hover {
+ animation: cambiarcolor 700ms, infinite;
+  }
+
+  article div a{
+    padding: 10px;
+    color:#d597eb;
+  }
+
+  .tabla-contenido{
+    margin: 15px, 60px;
+    color: #d597eb;
+  }
+
+  .formulario{   
+   margin: 60px;
+   padding: 15px;
 }
